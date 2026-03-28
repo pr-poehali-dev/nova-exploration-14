@@ -18,8 +18,9 @@ export default {
 			}
 		},
 		fontFamily: {
-			sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
-			mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
+			sans: ['PT Sans', 'system-ui', '-apple-system', 'Arial', 'sans-serif'],
+			serif: ['PT Serif', 'Georgia', 'Times New Roman', 'serif'],
+			mono: ['PT Mono', 'ui-monospace', 'Consolas', 'monospace'],
 		},
 		extend: {
 			colors: {
