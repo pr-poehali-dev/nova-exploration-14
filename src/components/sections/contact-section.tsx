@@ -11,13 +11,13 @@ export function ContactSection() {
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-
-    if (!formData.name || !formData.email || !formData.message) {
-      return
-    }
-
+    if (!formData.name || !formData.email || !formData.message) return
     setIsSubmitting(true)
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    await fetch("https://functions.poehali.dev/126a864c-32fb-4472-8fa4-ac20130aec73?resource=applications", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name: formData.name, email: formData.email, position: formData.message, message: "" }),
+    })
     setIsSubmitting(false)
     setSubmitSuccess(true)
     setFormData({ name: "", email: "", message: "" })

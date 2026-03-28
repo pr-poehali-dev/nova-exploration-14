@@ -1,0 +1,25 @@
+{
+  "tests": [
+    {
+      "name": "GET vacancies",
+      "method": "GET",
+      "path": "/?resource=vacancies",
+      "expectedStatus": 200,
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "GET applications",
+      "method": "GET",
+      "path": "/?resource=applications",
+      "expectedStatus": 200,
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "GET employees",
+      "method": "GET",
+      "path": "/?resource=employees",
+      "expectedStatus": 200,
+      "bodyMatcher": "partial"
+    }
+  ]
+}
