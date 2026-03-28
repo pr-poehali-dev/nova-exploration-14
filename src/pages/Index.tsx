@@ -217,12 +217,19 @@ export default function Index() {
       >
         <button
           onClick={() => scrollToSection(0)}
-          className="flex items-center gap-2 transition-transform hover:scale-105"
+          className="flex items-center gap-3 transition-transform hover:scale-105"
         >
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-foreground/15 backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-foreground/25">
-            <span className="font-sans text-xl font-bold text-foreground">Ф</span>
+          <div className="flex h-12 w-10 items-center justify-center rounded-lg bg-foreground/10 backdrop-blur-md transition-all duration-300 hover:bg-foreground/20 p-1">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Emblem_of_Federal_security_service.svg"
+              alt="Герб ФСБ"
+              className="h-full w-auto object-contain drop-shadow-lg"
+            />
           </div>
-          <span className="font-sans text-xl font-semibold tracking-tight text-foreground">ФСБ Remote</span>
+          <div className="flex flex-col items-start leading-tight">
+            <span className="font-sans text-xs font-medium uppercase tracking-widest text-foreground/60">Федеральная служба</span>
+            <span className="font-sans text-lg font-semibold tracking-tight text-foreground">ФСБ Remote</span>
+          </div>
         </button>
 
         <div className="hidden items-center gap-8 md:flex">
@@ -259,6 +266,14 @@ export default function Index() {
       >
         {/* Hero Section */}
         <section className="flex min-h-screen w-screen shrink-0 flex-col justify-end px-6 pb-16 pt-24 md:px-12 md:pb-24">
+          {/* Герб — фоновый watermark */}
+          <div className="pointer-events-none absolute right-0 top-0 h-full w-1/2 flex items-center justify-end pr-8 md:pr-20 opacity-[0.07]">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Emblem_of_Federal_security_service.svg"
+              alt=""
+              className="h-4/5 w-auto object-contain"
+            />
+          </div>
           <div className="max-w-3xl">
             <div className="mb-4 inline-block animate-in fade-in slide-in-from-bottom-4 rounded-full border border-foreground/20 bg-foreground/15 px-4 py-1.5 backdrop-blur-md duration-700">
               <p className="font-mono text-xs uppercase tracking-widest text-foreground/90">Федеральная служба · Удалённая занятость</p>
